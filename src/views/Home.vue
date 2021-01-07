@@ -18,9 +18,7 @@
         return state.counter
       })
       const handleC: voidF = increment
-      onMounted(() => {
-        console.log('props', state)
-      })
+      onMounted(() => {})
       return {
         handleC,
         counter

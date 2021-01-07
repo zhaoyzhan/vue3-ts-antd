@@ -1,4 +1,4 @@
-import { Qs } from "./module";
+import { Qs } from "./module"
 
 interface ContentType {
     [prop: string]: string;

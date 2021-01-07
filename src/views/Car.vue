@@ -7,18 +7,18 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, computed } from 'vue'
-  import CarIds1 from './components/car-ids1.vue'
-  import { useState } from '@/reactive'
-  export default defineComponent({
-    components: {
-      CarIds1
-    },
-    setup(props: any) {
-      const counter: number = (useState as any)().state.counter
-      return {
-        counter
-      }
+import { defineComponent } from 'vue'
+import CarIds1 from './components/car-ids1.vue'
+import { useState } from '@/reactive'
+export default defineComponent({
+  components: {
+    CarIds1
+  },
+  setup () {
+    const counter: number = (useState as any)().state.counter
+    return {
+      counter
     }
-  })
+  }
+})
 </script>

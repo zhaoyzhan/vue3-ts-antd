@@ -1,10 +1,10 @@
 <template>
-    <div class="car-ids1">
-        about-ids
-        <a-button @click="add('add-num', pNum + 1)" type="primary">点击 + 1</a-button>
-        <a-button @click="add('add-num', pNum - 1)">点击 - 1</a-button>
-        <div ref="testRef">ref</div>
-    </div>
+  <div class="car-ids1">
+    about-ids
+    <a-button @click="add('add-num', pNum + 1)" type="primary">点击 + 1</a-button>
+    <a-button @click="add('add-num', pNum - 1)">点击 - 1</a-button>
+    <div ref="testRef">ref</div>
+  </div>
 </template>
 
 
@@ -35,5 +35,5 @@
                 testRef
             }
         }
-  })
+    })
 </script>

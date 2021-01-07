@@ -1,2 +1,2 @@
-import querystring from 'qs';
-export const Qs = querystring;
+import querystring from 'qs'
+export const Qs = querystring
