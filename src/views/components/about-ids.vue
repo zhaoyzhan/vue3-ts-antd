@@ -27,7 +27,7 @@
                 console.log(testRef.value, 'lllll', this)
             })
             onBeforeUpdate(() => {
-                console.log('lllllonBeforeUpdate')
+                console.log('lllllonBeforeUpdate', 'ooooo')
             })
             return {
                 add,
