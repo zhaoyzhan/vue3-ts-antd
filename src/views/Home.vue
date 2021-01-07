@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <h1>This is home</h1>
+    <p>{{ counter }}</p>
+    <a-button @click="handleC">点击修改state</a-button>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
-
-@Options({
-  components: {
-    HelloWorld
-  }
-})
-export default class Home extends Vue {}
+  import { computed, defineComponent, onMounted, getCurrentInstance } from 'vue'
+  import { useState, stetaP } from '@/reactive'
+  interface IProps {}
+  type voidF = () => void
+  export default defineComponent({
+    setup(props: IProps) {
+      const {state, increment}: {state: stetaP, increment: voidF} = useState()
+      const counter = computed((): number => {
+        return state.counter
+      })
+      const handleC: voidF = increment
+      onMounted(() => {
+        console.log('props', state)
+      })
+      return {
+        handleC,
+        counter
+      }
+    }
+  })
 </script>
