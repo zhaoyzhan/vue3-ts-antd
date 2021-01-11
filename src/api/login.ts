@@ -10,5 +10,12 @@ export const Login = (data?: any) =>
     data: {
       ...data,
       contentType: '_forndata',
+      loginT: 'login'
     }
+  })
+export const NoticesNum = (data?: any) =>
+  request({        
+    url: '/scrm/notices/num',
+    method: 'post',
+    data: data || {}
   })

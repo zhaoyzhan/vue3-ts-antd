@@ -16,8 +16,12 @@ service.interceptors.request.use(
     if (config.data['contentType']) {
       delete config.data['contentType'];
     }
- 
-    config.headers['Authorization'] = 'Basic MTAwNDoxMjM0NTY=';
+    if (config.data['loginT']) {
+      config.headers['Authorization'] = 'Basic MTAwNDoxMjM0NTY=';
+      delete config.data['loginT']
+    } else {
+      config.headers['Authorization'] = `Bearer ${ sessionStorage.token }`;
+    }
 
     if(config.data['noToken']) {
       delete config.data['noToken'];
