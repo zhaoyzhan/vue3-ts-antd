@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <h1>This is login</h1>
-    <p><a-input v-model:value="form.account" placeholder="账号" /></p>
-    <p><a-input v-model:value="form.password" placeholder="密码" /></p>
+    <p><a-input v-model:value="form.account" placeholder="ceshi004" /></p>
+    <p><a-input v-model:value="form.password" placeholder="a1111111" /></p>
     <a-button @click="logHandle">登录</a-button>
 
     <a-button @click="messageHandle">消息</a-button>
